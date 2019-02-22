@@ -21,10 +21,16 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js?$/,
-                exclude: /node_modules|bower_components/,
-                use: ['babel-loader','eslint-loader']
+                enforce: 'pre',
+                test: /\.(js(x)?|ts|tsx|vue)$/,
+                loader: 'eslint-loader',
+                exclude: /node_modules/,
             },
+            {
+                test: /\.js(x)?$/,
+                // exclude: /node_modules|bower_components/,
+                use: ['babel-loader']
+            }
         ],
     }
 };

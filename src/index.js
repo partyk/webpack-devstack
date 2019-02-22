@@ -1,1 +1,1 @@
-alert('jedu');
+console.log('ahoj');
