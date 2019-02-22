@@ -17,19 +17,20 @@
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/plugin-syntax-object-rest-spread": "^7.2.0",
     "@babel/polyfill": "^7.2.5",
+    "@babel/preset-env": "^7.3.1",
     "@partyk/eslint-config-standard": "git+https://github.com/partyk/eslint-config-standart.git",
     "babel-loader": "^8.0.5",
     "babel-plugin-loop-optimizer": "^1.4.1",
     "browser-sync": "^2.26.3",
     "browser-sync-webpack-plugin": "^2.2.2",
+    "clean-webpack-plugin": "^1.0.1",
     "eslint": "^5.14.1",
     "eslint-loader": "^2.1.2",
     "standard": "^12.0.1",
+    "uglifyjs-webpack-plugin": "^2.1.1",
     "webpack": "^4.29.5",
     "webpack-cli": "^3.2.3",
     "webpack-merge": "^4.2.1"
   },
-  "dependencies": {
-    "@babel/preset-env": "^7.3.1"
-  }
+  "dependencies": {}
 }

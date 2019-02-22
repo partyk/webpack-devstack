@@ -4,12 +4,12 @@ Webpack DevStack for develop
 ## Instalation from Git
 
 1.  Download or clone repository
-2.  run ```npm install```
+2.  run ```yarn install```
 
 ## How to run Webpack
  
-1. ```npm start``` – run for developer mode
-2. ```npm run build``` – run for production mode
+1. ```yarn start``` – run for developer mode
+2. ```yarn run build``` – run for production mode
 
 ## Configured files
 
