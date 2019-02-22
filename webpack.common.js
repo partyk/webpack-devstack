@@ -15,7 +15,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist/assets'),
         filename: '[name].js',
-        publicPath: '/dist/assets/js/', //nastaveni cesty k chunkum
+        publicPath: '/assets/js/', //nastaveni cesty k chunkum
         chunkFilename: 'chunks/[name].chunk.js',
     },
     module: {
