@@ -1,1 +1,1 @@
-console.log('ahoj');
+import '@babel/polyfill';

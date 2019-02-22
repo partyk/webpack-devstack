@@ -14,8 +14,12 @@
   "private": true,
   "devDependencies": {
     "@babel/core": "^7.3.3",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-syntax-object-rest-spread": "^7.2.0",
+    "@babel/polyfill": "^7.2.5",
     "@partyk/eslint-config-standard": "git+https://github.com/partyk/eslint-config-standart.git",
     "babel-loader": "^8.0.5",
+    "babel-plugin-loop-optimizer": "^1.4.1",
     "browser-sync": "^2.26.3",
     "browser-sync-webpack-plugin": "^2.2.2",
     "eslint": "^5.14.1",
@@ -25,5 +29,7 @@
     "webpack-cli": "^3.2.3",
     "webpack-merge": "^4.2.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@babel/preset-env": "^7.3.1"
+  }
 }
