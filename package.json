@@ -32,5 +32,7 @@
     "webpack-cli": "^3.2.3",
     "webpack-merge": "^4.2.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "css-loader": "^2.1.1"
+  }
 }
