@@ -6,13 +6,14 @@ const merge = require('webpack-merge');
 const loaders = require('./webpack/webpack.loaders');
 
 /* plugins */
+const plugins = require('./webpack/webpack.plugins');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = merge(
     {
         mode: 'development',
         resolve: {
-            extensions: ['.js', '.json'],
+            extensions: ['.css', '.js', '.json'],
             modules: [
                 path.resolve(__dirname, 'node_modules')
             ]
@@ -31,5 +32,7 @@ module.exports = merge(
         ]
     },
     loaders.loadESLint(undefined, ['/node_modules/']),
-    loaders.loadJS()
+    loaders.loadJS(),
+    // loaders.loadCSS(),
+    plugins.friendlyErrors()
 );

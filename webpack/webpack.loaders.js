@@ -1,2 +1,3 @@
-exports.loadJS = require('./webpack.js');
-exports.loadESLint = require('./webpack.eslint');
+exports.loadJS = require('./loaders/webpack.js');
+exports.loadESLint = require('./loaders/webpack.eslint');
+exports.loadCSS = require('./loaders/webpack.css');

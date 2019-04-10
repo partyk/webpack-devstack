@@ -1,0 +1,1 @@
+exports.friendlyErrors = require('./plugins/webpack.friendlyErrors');
