@@ -1,4 +1,5 @@
 /* config for all */
+const config = require('./webpack.config');
 const path = require('path');
 const merge = require('webpack-merge');
 
@@ -18,17 +19,11 @@ module.exports = merge(
                 path.resolve(__dirname, 'node_modules')
             ]
         },
-        entry: {
-            main: path.resolve(__dirname, 'src/index.js')
-        },
         output: {
-            path: path.resolve(__dirname, 'dist/assets'),
-            filename: '[name].js',
-            publicPath: '/assets/js/', // nastaveni cesty k chunkum
-            chunkFilename: 'chunks/[name].[contenthash].chunk.js'
+            path: path.resolve(config.path.assets)
         },
         plugins: [
-            new CleanWebpackPlugin(['dist/assets/*'])
+            new CleanWebpackPlugin([config.path.assets + '*'])
         ]
     },
     loaders.loadESLint(undefined, ['/node_modules/']),

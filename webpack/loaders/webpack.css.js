@@ -2,6 +2,8 @@ const config = require('../../webpack.config');
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
+console.log(path.resolve(config.path.dist, '[name].css'));
+
 module.exports = ({include, exclude} = {}) => ({
     entry: {
         style: path.resolve(config.path.src, 'css/src/style.css')
@@ -16,9 +18,7 @@ module.exports = ({include, exclude} = {}) => ({
                     {
                         loader: MiniCssExtractPlugin.loader,
                         options: {
-                            // you can specify a publicPath here
-                            // by default it use publicPath in webpackOptions.output
-                            publicPath: '../'
+                            publicPath: config.path.publicPathAssets
                         }
                     },
                     // 'style-loader',
@@ -34,7 +34,7 @@ module.exports = ({include, exclude} = {}) => ({
     },
     plugins: [
         new MiniCssExtractPlugin({
-            // filename: path.resolve(config.path.dist, '[name].css')
+            filename: 'css/[name].css'
         })
     ]
 });
