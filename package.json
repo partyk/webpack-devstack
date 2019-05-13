@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js"
+    "build": "webpack --config webpack.prod.js",
+    "dev": "webpack-dashboard -- webpack --config webpack.dev.js",
+    "dev-node-nightly": "node-nightly --inspect ./node_modules/webpack/bin/webpack.js --config webpack.dev.js"
   },
   "keywords": [],
   "author": "Bohdan Partyk <bohdan@partyk.cz>",
@@ -18,7 +20,6 @@
     "@babel/plugin-syntax-object-rest-spread": "^7.2.0",
     "@babel/polyfill": "^7.2.5",
     "@babel/preset-env": "^7.3.1",
-    "@partyk/eslint-config-standard": "git+https://github.com/partyk/eslint-config-standart.git",
     "babel-loader": "^8.0.5",
     "babel-plugin-loop-optimizer": "^1.4.1",
     "browser-sync": "^2.26.3",
@@ -26,6 +27,7 @@
     "clean-webpack-plugin": "^1.0.1",
     "css-loader": "^2.1.1",
     "eslint": "^5.14.1",
+    "eslint-config-standart-partyk": "^1.6.5",
     "eslint-loader": "^2.1.2",
     "friendly-errors-webpack-plugin": "^1.7.0",
     "mini-css-extract-plugin": "^0.5.0",
@@ -34,6 +36,7 @@
     "terser-webpack-plugin": "^1.2.3",
     "webpack": "^4.29.5",
     "webpack-cli": "^3.2.3",
+    "webpack-dashboard": "^3.0.5",
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {}
