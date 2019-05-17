@@ -18,6 +18,4 @@ module.exports = merge(common, {
     watchOptions: {
         ignored: /node_modules/,
     }
-},
-plugins.browserSync(),
-plugins.dashboard());
+});

@@ -12,7 +12,7 @@ module.exports = (options) => {
         stats: {
             // copied from `'minimal'`
             all: false,
-            assets: false,
+            assets: true,
             modules: true,
             maxModules: 0,
             errors: false, // disabled errors

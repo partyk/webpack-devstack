@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "dev": "webpack-dashboard -- webpack --config webpack.dev.js",
+    "dev:normal": "webpack --config webpack.dev.js",
+    "dev:server": "webpack-dev-server --config webpack.dev.js",
     "dev-node-nightly": "node-nightly --inspect ./node_modules/webpack/bin/webpack.js --config webpack.dev.js"
   },
   "keywords": [],
@@ -36,7 +37,8 @@
     "terser-webpack-plugin": "^1.2.3",
     "webpack": "^4.29.5",
     "webpack-cli": "^3.2.3",
-    "webpack-dashboard": "^3.0.5",
+    "webpack-dashboard": "^3.0.7",
+    "webpack-dev-server": "^3.3.1",
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {}
