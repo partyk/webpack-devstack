@@ -29,5 +29,8 @@ module.exports = merge(
     loaders.loadESLint(undefined, ['/node_modules/']),
     loaders.loadJS(),
     loaders.loadCSS(),
-    plugins.friendlyErrors()
+    plugins.friendlyErrors(),
+    plugins.imageMin()
+    // plugins.dashboard(),
+    // plugins.browserSync()
 );
