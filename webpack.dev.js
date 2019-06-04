@@ -2,11 +2,14 @@
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
 
+/* globals */
+// global.isProduction = true;
+
 /* loaders */
 // const loaders = require('./webpack/webpack.loaders');
 
 /* plugins */
-const plugins = require('./webpack/webpack.plugins');
+// const plugins = require('./webpack/webpack.plugins');
 
 module.exports = merge(common, {
     mode: 'development',
@@ -16,6 +19,6 @@ module.exports = merge(common, {
     },
     watch: true,
     watchOptions: {
-        ignored: /node_modules/,
+        ignored: /node_modules/
     }
 });

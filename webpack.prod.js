@@ -1,6 +1,9 @@
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
 
+/* globals */
+global.isProduction = true;
+
 /* plugins */
 const TerserPlugin = require('terser-webpack-plugin');
 
@@ -17,7 +20,7 @@ const terserOptions = {
     ie8: false,
     keep_classnames: undefined,
     keep_fnames: false,
-    safari10: false,
+    safari10: false
 };
 
 module.exports = merge(common, {
@@ -28,8 +31,8 @@ module.exports = merge(common, {
                 // exclude: /\/excludes/,
                 test: /\.js(\?.*)?$/i,
                 terserOptions
-            }),
-        ],
+            })
+        ]
     },
     plugins: []
 });

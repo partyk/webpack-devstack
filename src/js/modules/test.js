@@ -1,2 +1,1 @@
-console.log('test module');
-alert('aaa');
+console.log('test module OK');
