@@ -20,9 +20,5 @@ module.exports = (options) => {
         },
         ...options
     };
-    return {
-        plugins: [
-            new BrowserSyncPlugin(options.browserSync, options.plugin)
-        ]
-    };
+    return new BrowserSyncPlugin(options.browserSync, options.plugin);
 };

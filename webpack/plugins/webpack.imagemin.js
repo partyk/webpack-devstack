@@ -9,9 +9,5 @@ module.exports = (options = {}) => {
         test: /\.(jpe?g|png|gif|svg)$/i
     },
     options);
-    return {
-        plugins: [
-            new ImageminPlugin(options)
-        ]
-    };
+    return new ImageminPlugin(options);
 };

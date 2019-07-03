@@ -7,9 +7,5 @@ module.exports = (options) => {
         },
         ...options
     };
-    return {
-        plugins: [
-            new DashboardPlugin(options)
-        ]
-    };
+    return new DashboardPlugin(options);
 };
