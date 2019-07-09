@@ -25,6 +25,9 @@ const terserOptions = {
 
 module.exports = merge(common, {
     mode: 'production',
+    stats: {
+        assets: false
+    },
     optimization: {
         minimizer: [
             new TerserPlugin({
