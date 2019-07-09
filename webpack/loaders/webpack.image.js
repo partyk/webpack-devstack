@@ -11,9 +11,11 @@ module.exports = ({include, exclude} = {}) => ({
                 exclude,
                 use: [
                     {
-                        loader: 'file-loader',
+                        loader: 'url-loader',
                         options: {
-                            limit: 100,
+                            limit: 10 * 1024,
+                            noquotes: true,
+                            fallback: 'file-loader',
                             name: 'style/[name].[contenthash].[ext]',
                             outputPath: 'images/',
                             publicPath: config.path.publicPathAssets + 'images/'
@@ -28,9 +30,8 @@ module.exports = ({include, exclude} = {}) => ({
                                 progressive: true,
                                 quality: 65
                             },
-                            // optipng.enabled: false will disable optipng
                             optipng: {
-                                enabled: false,
+                                enabled: true
                             },
                             pngquant: {
                                 quality: '65-90',
@@ -38,11 +39,6 @@ module.exports = ({include, exclude} = {}) => ({
                             },
                             gifsicle: {
                                 interlaced: false
-                            },
-                            // the webp option will enable WEBP
-                            webp: {
-                                enabled: true, // false -> enabled convert other of images to WEBP format
-                                quality: 75
                             }
                         }
                     }

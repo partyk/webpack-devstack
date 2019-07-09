@@ -2,7 +2,6 @@
 @link doc https://github.com/webpack-contrib/copy-webpack-plugin
  */
 const config = require('../../webpack.config');
-const path = require('path');
 const deepmerge = require('deepmerge');
 const CopyPlugin = require('copy-webpack-plugin');
 
