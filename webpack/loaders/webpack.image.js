@@ -39,7 +39,9 @@ module.exports = ({include, exclude} = {}) => ({
                             },
                             gifsicle: {
                                 interlaced: false
-                            }
+                            },
+                            // added settings of webp enabled convert all formats image to WEBP format
+                            webp: false // disabled webp
                         }
                     }
                 ]
