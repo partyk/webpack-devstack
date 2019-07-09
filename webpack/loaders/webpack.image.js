@@ -4,13 +4,14 @@ module.exports = ({include, exclude} = {}) => ({
     module: {
         rules: [
             {
-                test: /\.(png|jpe?g|gif|svg)$/,
+                test: /\.(png|jpe?g|gif|svg|webp)$/,
                 include,
                 exclude,
                 use: [
                     {
                         loader: 'file-loader',
                         options: {
+                            limit: 100,
                             name: '[name].[contenthash].[ext]',
                             outputPath: 'images/',
                             publicPath: config.path.publicPathAssets + 'images/'
@@ -25,7 +26,7 @@ module.exports = ({include, exclude} = {}) => ({
                             },
                             // optipng.enabled: false will disable optipng
                             optipng: {
-                                enabled: false
+                                enabled: true
                             },
                             pngquant: {
                                 quality: '65-90',
@@ -36,6 +37,7 @@ module.exports = ({include, exclude} = {}) => ({
                             },
                             // the webp option will enable WEBP
                             webp: {
+                                enabled: true, // false -> enabled convert other of images to WEBP format
                                 quality: 75
                             }
                         }
