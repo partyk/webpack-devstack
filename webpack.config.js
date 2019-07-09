@@ -7,6 +7,7 @@ const config = {
     path: {
         src: path.resolve(__dirname, 'src'),
         dist: path.resolve(__dirname, 'dist'),
+        temp: path.resolve(__dirname, 'temp/webpack'),
         assets: path.resolve(__dirname, 'dist/assets'),
         publicPath: '/',
         publicPathAssets: '/assets/'

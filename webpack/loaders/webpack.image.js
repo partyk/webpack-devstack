@@ -28,7 +28,7 @@ module.exports = ({include, exclude} = {}) => ({
                             // disable: true, // webpack@2.x and newer
                             mozjpeg: {
                                 progressive: true,
-                                quality: 65
+                                quality: 50
                             },
                             optipng: {
                                 enabled: true
