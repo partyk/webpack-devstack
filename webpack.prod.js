@@ -25,6 +25,10 @@ const terserOptions = {
 
 module.exports = merge(common, {
     mode: 'production',
+    // https://webpack.js.org/configuration/performance/
+    performance: {
+        hints: 'warning'
+    },
     stats: {
         assets: false
     },
