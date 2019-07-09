@@ -39,7 +39,8 @@ module.exports = merge(
             new CleanWebpackPlugin([config.path.assets + '*']),
             plugins.friendlyErrors(),
             plugins.copy(),
-            plugins.imageMin() // ,
+            plugins.imageMin(),
+            plugins.webpackBar() // ,
             // plugins.dashboard(),
             // plugins.browserSync()
         ]

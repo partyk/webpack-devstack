@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --progress --config webpack.dev.js",
-    "build": "webpack --progress --env.production --config webpack.prod.js",
-    "dev:normal": "webpack --progress --config webpack.dev.js",
-    "dev:server": "webpack-dev-server --progress --config webpack.dev.js",
-    "dev-node-nightly": "node-nightly --progress --inspect ./node_modules/webpack/bin/webpack.js --config webpack.dev.js"
+    "start": "webpack --config webpack.dev.js",
+    "build": "webpack --env.production --config webpack.prod.js",
+    "dev:normal": "webpack --config webpack.dev.js",
+    "dev:server": "webpack-dev-server --config webpack.dev.js",
+    "dev-node-nightly": "node-nightly --inspect ./node_modules/webpack/bin/webpack.js --config webpack.dev.js"
   },
   "keywords": [],
   "author": "Bohdan Partyk <bohdan@partyk.cz>",
