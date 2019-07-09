@@ -1,5 +1,7 @@
 const config = require('../../webpack.config');
 
+console.log(process.env.NODE_ENV);
+
 module.exports = ({include, exclude} = {}) => ({
     module: {
         rules: [
@@ -12,7 +14,7 @@ module.exports = ({include, exclude} = {}) => ({
                         loader: 'file-loader',
                         options: {
                             limit: 100,
-                            name: '[name].[contenthash].[ext]',
+                            name: 'style/[name].[contenthash].[ext]',
                             outputPath: 'images/',
                             publicPath: config.path.publicPathAssets + 'images/'
                         }
@@ -20,13 +22,15 @@ module.exports = ({include, exclude} = {}) => ({
                     {
                         loader: 'image-webpack-loader',
                         options: {
+                            // bypassOnDebug: true, // webpack@1.x
+                            // disable: true, // webpack@2.x and newer
                             mozjpeg: {
                                 progressive: true,
                                 quality: 65
                             },
                             // optipng.enabled: false will disable optipng
                             optipng: {
-                                enabled: true
+                                enabled: false,
                             },
                             pngquant: {
                                 quality: '65-90',

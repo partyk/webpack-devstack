@@ -1,5 +1,9 @@
 const path = require('path');
 const config = {
+    dir: {
+        src: 'src',
+        dist: 'dist'
+    },
     path: {
         src: path.resolve(__dirname, 'src'),
         dist: path.resolve(__dirname, 'dist'),
