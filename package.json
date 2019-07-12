@@ -37,6 +37,8 @@
     "image-webpack-loader": "^5.0.0",
     "imagemin-webpack-plugin": "^2.4.2",
     "mini-css-extract-plugin": "^0.7.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0",
     "standard": "^12.0.1",
     "style-loader": "^0.23.1",
     "terser-webpack-plugin": "^1.2.3",

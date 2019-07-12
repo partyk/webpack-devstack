@@ -48,5 +48,6 @@ module.exports = merge(
     loaders.loadESLint(undefined, ['/node_modules/']),
     loaders.loadJS(),
     loaders.loadCSS(),
+    loaders.loadSCSS(),
     loaders.loadImage()
 );
