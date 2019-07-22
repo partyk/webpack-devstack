@@ -1,5 +1,10 @@
 const path = require('path');
+const isProduction = require('./webpack/libs/isProduction');
+const pkg = require('./package.json');
 const config = {
+    pkg,
+    isProduction: isProduction(),
+    isDevelop: !isProduction(),
     dir: {
         src: 'src',
         dist: 'dist'

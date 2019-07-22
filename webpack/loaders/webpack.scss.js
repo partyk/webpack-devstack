@@ -1,8 +1,9 @@
 const config = require('../../webpack.config');
 const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-console.log(path.resolve(config.path.dist, '[name].css'));
+/* plugins */
+const plugins = require('./../webpack.plugins');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = ({include, exclude} = {}) => ({
     entry: {
@@ -26,13 +27,26 @@ module.exports = ({include, exclude} = {}) => ({
                         loader: 'css-loader',
                         options: {
                             importLoaders: 4,
-                            sourceMap: true
+                            sourceMap: config.isDevelop
+                        }
+                    },
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            ident: 'postcss',
+                            sourceMap: config.isDevelop,
+                            plugins: [
+                                plugins.postCSSDiscardDuplicates(),
+                                plugins.pixrem(),
+                                plugins.prefixer(),
+                                ...(config.isProduction ? [plugins.cssnano()] : [])
+                            ]
                         }
                     },
                     {
                         loader: 'sass-loader',
                         options: {
-                            sourceMap: true
+                            sourceMap: config.isDevelop
                         }
                     }
                 ]

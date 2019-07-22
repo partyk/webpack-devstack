@@ -4,3 +4,7 @@ exports.browserSync = require('./plugins/webpack.browserSync');
 exports.imageMin = require('./plugins/webpack.imagemin');
 exports.copy = require('./plugins/webpack.copy');
 exports.webpackBar = require('./plugins/webpack.webpackBar');
+exports.prefixer = require('./plugins/webpack.prefixer');
+exports.pixrem = require('./plugins/webpack.pixrem');
+exports.postCSSDiscardDuplicates = require('./plugins/webpack.postcssDiscardDuplicates');
+exports.cssnano = require('./plugins/webpack.cssnano');

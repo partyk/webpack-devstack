@@ -1,7 +1,5 @@
 const config = require('../../webpack.config');
 
-console.log(process.env.NODE_ENV);
-
 module.exports = ({include, exclude} = {}) => ({
     module: {
         rules: [
