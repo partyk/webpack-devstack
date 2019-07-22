@@ -1,8 +1,11 @@
 const config = require('../../webpack.config');
 const path = require('path');
 
+/* modules */
+const modules = require('./../modules/index');
+
 /* plugins */
-const plugins = require('./../webpack.plugins');
+// const plugins = require('./../webpack.plugins');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = ({include, exclude} = {}) => ({
@@ -30,19 +33,7 @@ module.exports = ({include, exclude} = {}) => ({
                             sourceMap: config.isDevelop
                         }
                     },
-                    {
-                        loader: 'postcss-loader',
-                        options: {
-                            ident: 'postcss',
-                            sourceMap: config.isDevelop,
-                            plugins: [
-                                plugins.postCSSDiscardDuplicates(),
-                                plugins.pixrem(),
-                                plugins.prefixer(),
-                                ...(config.isProduction ? [plugins.cssnano()] : [])
-                            ]
-                        }
-                    }
+                    modules.loaderPostCSS()
                 ]
             }
         ]
