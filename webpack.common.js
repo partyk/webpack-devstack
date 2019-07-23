@@ -49,5 +49,6 @@ module.exports = merge(
     loaders.loadJS(),
     loaders.loadCSS(),
     loaders.loadSCSS(),
-    loaders.loadImage()
+    loaders.loadImage(),
+    loaders.loadFonts()
 );

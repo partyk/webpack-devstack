@@ -1,1 +1,1 @@
-exports.loaderPostCSS = require('./loaderPostCSS');
+exports.loaderPostCSS = require('./webpack.loaderPostCSS');
