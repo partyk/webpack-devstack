@@ -33,7 +33,11 @@ module.exports = ({include, exclude} = {}) => ({
                             sourceMap: config.isDevelop
                         }
                     },
+                    {
+                        loader: 'resolve-url-loader'
+                    },
                     modules.loaderPostCSS(),
+                    modules.loaderIconFont(),
                     {
                         loader: 'sass-loader',
                         options: {

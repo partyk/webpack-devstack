@@ -7,7 +7,7 @@ const merge = require('webpack-merge');
 const loaders = require('./webpack/webpack.loaders');
 
 /* plugins */
-const plugins = require('./webpack/webpack.plugins');
+const plugins = require('./webpack/plugins/index');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = merge(
@@ -40,6 +40,7 @@ module.exports = merge(
             plugins.friendlyErrors(),
             plugins.copy(),
             plugins.imageMin(),
+            plugins.iconFont(),
             plugins.webpackBar() // ,
             // plugins.dashboard(),
             // plugins.browserSync()
