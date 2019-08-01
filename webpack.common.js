@@ -8,7 +8,6 @@ const loaders = require('./webpack/loaders/index');
 
 /* plugins */
 const plugins = require('./webpack/plugins/index');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = merge(
     {
@@ -36,7 +35,7 @@ module.exports = merge(
             path: path.resolve(config.path.assets)
         },
         plugins: [
-            new CleanWebpackPlugin([config.path.assets + '*']),
+            plugins.clean(),
             plugins.friendlyErrors(),
             plugins.copy(),
             plugins.imageMin(),
