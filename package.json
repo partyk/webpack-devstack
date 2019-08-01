@@ -15,7 +15,7 @@
   "author": "Bohdan Partyk <bohdan@partyk.cz>",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.3.3",
+    "@babel/core": "^7.5.5",
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/plugin-syntax-object-rest-spread": "^7.2.0",
     "@babel/preset-env": "^7.3.1",
@@ -27,6 +27,7 @@
     "clean-webpack-plugin": "^1.0.0",
     "copy-webpack-plugin": "^5.0.3",
     "css-loader": "^3.0.0",
+    "cssnano": "^4.1.10",
     "deepmerge": "^3.2.0",
     "eslint": "^6.0.0",
     "eslint-config-standart-partyk": "^1.6.5",
@@ -34,11 +35,15 @@
     "expose-loader": "^0.7.5",
     "file-loader": "^4.0.0",
     "friendly-errors-webpack-plugin": "^1.7.0",
+    "icon-font-loader": "^2.1.0",
     "image-webpack-loader": "^5.0.0",
     "imagemin-webpack-plugin": "^2.4.2",
     "mini-css-extract-plugin": "^0.7.0",
     "node-sass": "^4.12.0",
+    "pixrem": "^5.0.0",
+    "postcss-discard-duplicates": "^4.0.2",
     "postcss-loader": "^3.0.0",
+    "resolve-url-loader": "^3.1.0",
     "sass-loader": "^7.1.0",
     "standard": "^12.0.1",
     "style-loader": "^0.23.1",
@@ -52,13 +57,7 @@
     "webpackbar": "^3.2.0"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.4.4",
     "core-js": "^3.1.4",
-    "cssnano": "^4.1.10",
-    "icon-font-loader": "^2.1.0",
-    "jquery": "^3.4.1",
-    "pixrem": "^5.0.0",
-    "postcss-discard-duplicates": "^4.0.2",
-    "resolve-url-loader": "^3.1.0"
+    "jquery": "^3.4.1"
   }
 }

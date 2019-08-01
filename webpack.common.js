@@ -4,7 +4,7 @@ const path = require('path');
 const merge = require('webpack-merge');
 
 /* loaders */
-const loaders = require('./webpack/webpack.loaders');
+const loaders = require('./webpack/loaders/index');
 
 /* plugins */
 const plugins = require('./webpack/plugins/index');
