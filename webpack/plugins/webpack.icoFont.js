@@ -1,3 +1,10 @@
+/**
+ * icon-font-loader
+ * @plugin
+ * @link https://github.com/vusion/icon-font-loader
+ * @type {{path, isProduction, isDevelop, dir, pkg}}
+ */
+
 const config = require('../../webpack.config');
 const IconFontPlugin = require('icon-font-loader').Plugin;
 

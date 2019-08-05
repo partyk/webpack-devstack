@@ -45,10 +45,19 @@ module.exports = merge(
             // plugins.browserSync()
         ]
     },
-    loaders.loadESLint(undefined, ['/node_modules/']),
+    loaders.loadESLint({
+        exclude: [
+            path.resolve(__dirname, 'node_modules')
+        ]
+    }),
     loaders.loadJS(),
     loaders.loadCSS(),
     loaders.loadSCSS(),
     loaders.loadImage(),
-    loaders.loadFonts()
+    loaders.loadFonts({
+        include: [
+            path.resolve(__dirname, 'src/icons'),
+            path.resolve(__dirname, 'src/fonts')
+        ]
+    })
 );

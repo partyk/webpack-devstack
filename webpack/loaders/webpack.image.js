@@ -11,7 +11,7 @@ module.exports = ({include, exclude} = {}) => ({
                     {
                         loader: 'url-loader',
                         options: {
-                            limit: 10 * 1024,
+                            limit: 1 * 1024, // limit for base64 format
                             noquotes: true,
                             fallback: 'file-loader',
                             name: 'style/[name].[contenthash].[ext]',
@@ -37,6 +37,16 @@ module.exports = ({include, exclude} = {}) => ({
                             },
                             gifsicle: {
                                 interlaced: false
+                            },
+                            svgo: {
+                                plugins: [
+                                    {
+                                        removeViewBox: false
+                                    },
+                                    {
+                                        removeEmptyAttrs: false
+                                    }
+                                ]
                             },
                             // added settings of webp enabled convert all formats image to WEBP format
                             webp: false // disabled webp

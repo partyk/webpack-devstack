@@ -15,5 +15,7 @@
     .icon-svg-#{$icon} {
         background-image: url('../../images/icons/#{$icon}.svg');
         background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
     }
 }
