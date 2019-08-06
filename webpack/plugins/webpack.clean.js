@@ -7,7 +7,7 @@ const deepmerge = require('deepmerge');
 const config = require('../../webpack.config');
 /**
  * plugin clean
- * @param options {array}
+ * @param options {object}
  * @returns {CleanWebpackPlugin}
  */
 module.exports = (options = {}) => {
