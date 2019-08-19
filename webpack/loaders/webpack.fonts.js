@@ -6,7 +6,7 @@ module.exports = ({include, exclude} = {}) => {
         module: {
             rules: [
                 {
-                    test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                    test: /\.(woff(2)?|ttf|eot|otf|svg)(\?v=\d+\.\d+\.\d+)?$/,
                     include,
                     exclude,
                     use: [
