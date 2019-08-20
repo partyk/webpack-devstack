@@ -22,7 +22,11 @@ module.exports = ({include, exclude} = {}) => ({
                     {
                         loader: MiniCssExtractPlugin.loader,
                         options: {
-                            publicPath: config.path.publicPathAssets
+                            publicPath: config.path.publicPathAssets,
+                            // only enable hot in development
+                            hmr: config.isDevelop,
+                            // if hmr does not work, this is a forceful method.
+                            reloadAll: config.isProduction
                         }
                     },
                     // 'style-loader',
@@ -40,7 +44,9 @@ module.exports = ({include, exclude} = {}) => ({
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'css/[name].css'
+            filename: 'css/[name].css',
+            chunkFilename: '[id].[hash].css',
+            ignoreOrder: false // Enable to remove warnings about conflicting order
         })
     ]
 });
