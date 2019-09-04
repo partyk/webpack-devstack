@@ -12,7 +12,7 @@ const config = require('../../webpack.config');
  */
 module.exports = (options = {}) => {
     options = deepmerge({
-        cleanStaleWebpackAssets: false,
+        // cleanStaleWebpackAssets: false,
         protectWebpackAssets: false
     }, options);
     return new CleanWebpackPlugin(options);

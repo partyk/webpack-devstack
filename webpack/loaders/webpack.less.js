@@ -32,15 +32,19 @@ module.exports = ({include, exclude} = {}) => ({
                             importLoaders: 4,
                             sourceMap: config.isDevelop
                         }
-                    },
+                    }, /*
                     {
                         loader: 'resolve-url-loader'
-                    },
+                    },*/
                     modules.loaderPostCSS(),
                     // modules.loaderIconFont(),
                     {
                         loader: 'less-loader',
                         options: {
+                            paths: [
+                                config.path.node_modules,
+                                config.path.src
+                            ],
                             sourceMap: config.isDevelop
                         }
                     }
