@@ -26,7 +26,7 @@ module.exports = merge(
             errorDetails: true
         },
         resolve: {
-            extensions: ['.css', '.js', '.json'],
+            extensions: ['.css', '.tsx', '.ts', '.js', '.json'],
             modules: [
                 path.resolve(__dirname, 'node_modules')
             ]
@@ -50,6 +50,7 @@ module.exports = merge(
             path.resolve(__dirname, 'node_modules')
         ]
     }),
+    loaders.loadTypeScript(),
     loaders.loadJS(),
     loaders.loadCss(),
     loaders.loadScss(),
