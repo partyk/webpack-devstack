@@ -55,7 +55,9 @@ module.exports = ({include, exclude} = {}) => ({
     plugins: [
         new MiniCssExtractPlugin({
             filename: 'css/[name].css',
-            chunkFilename: '[id].css'
+            publicPath: config.domain.assets, // nastaveni cesty k chunkum
+            chunkFilename: 'css/chunks/[id].[hash].css',
+            ignoreOrder: false // Enable to remove warnings about conflicting order
         })
     ]
 });
