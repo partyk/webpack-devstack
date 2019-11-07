@@ -11,3 +11,5 @@ exports.cssnano = require('./webpack.cssnano');
 exports.iconFont = require('./webpack.icoFont');
 exports.clean = require('./webpack.clean');
 exports.terser = require('./webpack.terser');
+exports.duplicatePackageChecker = require('./webpack.duplicatePackageChecker');
+exports.bundleAnalyzer = require('./webpack.bundleAnalyzer');

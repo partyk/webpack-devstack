@@ -40,9 +40,8 @@ module.exports = merge(
             plugins.copy(),
             plugins.imageMin(),
             plugins.iconFont(),
-            plugins.webpackBar() // ,
-            // plugins.dashboard(),
-            // plugins.browserSync()
+            plugins.webpackBar(),
+            plugins.duplicatePackageChecker()
         ]
     },
     loaders.loadESLint({
@@ -54,7 +53,7 @@ module.exports = merge(
     loaders.loadJS(),
     loaders.loadCss(),
     loaders.loadScss(),
-    // loaders.loadLess(),
+    loaders.loadLess(),
     loaders.loadImage(),
     loaders.loadFonts({
         include: [

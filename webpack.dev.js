@@ -9,7 +9,7 @@ const common = require('./webpack.common.js');
 // const loaders = require('./webpack/webpack.loaders');
 
 /* plugins */
-// const plugins = require('./webpack/webpack.plugins');
+const plugins = require('./webpack/plugins/index');
 
 module.exports = merge(common, {
     mode: 'development',
@@ -20,5 +20,10 @@ module.exports = merge(common, {
     watch: true,
     watchOptions: {
         ignored: /node_modules/
-    }
+    },
+    plugins: [
+        plugins.bundleAnalyzer() // ,
+        // plugins.dashboard()
+        // plugins.browserSync()
+    ]
 });
