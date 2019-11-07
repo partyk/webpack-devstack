@@ -54,7 +54,7 @@ module.exports = merge(
     loaders.loadJS(),
     loaders.loadCss(),
     loaders.loadScss(),
-    loaders.loadLess(),
+    // loaders.loadLess(),
     loaders.loadImage(),
     loaders.loadFonts({
         include: [

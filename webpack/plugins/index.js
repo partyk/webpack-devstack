@@ -10,3 +10,4 @@ exports.postCSSDiscardDuplicates = require('./webpack.postcssDiscardDuplicates')
 exports.cssnano = require('./webpack.cssnano');
 exports.iconFont = require('./webpack.icoFont');
 exports.clean = require('./webpack.clean');
+exports.terser = require('./webpack.terser');

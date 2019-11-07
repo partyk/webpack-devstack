@@ -2,3 +2,4 @@
 node_modules/
 dist/assets/
 temp
+webpack.config.local.js
