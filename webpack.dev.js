@@ -22,7 +22,7 @@ module.exports = merge(common, {
         ignored: /node_modules/
     },
     plugins: [
-        plugins.bundleAnalyzer() // ,
+        plugins.bundleAnalyzer() //,
         // plugins.dashboard()
         // plugins.browserSync()
     ]
