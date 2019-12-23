@@ -6,3 +6,4 @@ exports.loadLess = require('./webpack.less');
 exports.loadImage = require('./webpack.image');
 exports.loadFonts = require('./webpack.fonts');
 exports.loadTypeScript = require('./webpack.typeScript');
+exports.loadVueJs = require('./webpack.vueJs');

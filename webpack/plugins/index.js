@@ -13,3 +13,4 @@ exports.clean = require('./webpack.clean');
 exports.terser = require('./webpack.terser');
 exports.duplicatePackageChecker = require('./webpack.duplicatePackageChecker');
 exports.bundleAnalyzer = require('./webpack.bundleAnalyzer');
+exports.vueLoader = require('./webpack.vueLoader');

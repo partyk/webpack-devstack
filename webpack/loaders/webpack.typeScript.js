@@ -3,10 +3,11 @@ module.exports = ({include, exclude} = {}) => ({
         rules: [
             {
                 test: /\.ts(x)?$/,
-                exclude: /node_modules|bower_components/,
+                include,
+                exclude,
                 loader: 'ts-loader',
                 options: {
-                    // appendTsSuffixTo: [/\.vue$/] // for support VueJS
+                    appendTsSuffixTo: [/\.vue$/] // for support VueJS
                 }
             }
         ]

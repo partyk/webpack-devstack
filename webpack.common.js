@@ -26,7 +26,7 @@ module.exports = merge(
             errorDetails: true
         },
         resolve: {
-            extensions: ['.css', '.tsx', '.ts', '.js', '.json'],
+            extensions: ['.vue', '.css', '.tsx', '.ts', '.js', '.json'],
             modules: [
                 path.resolve(__dirname, 'node_modules')
             ]
@@ -41,7 +41,8 @@ module.exports = merge(
             plugins.imageMin(),
             plugins.iconFont(),
             plugins.webpackBar(),
-            plugins.duplicatePackageChecker()
+            plugins.duplicatePackageChecker(),
+            plugins.vueLoader()
         ]
     },
     loaders.loadESLint({
@@ -50,6 +51,7 @@ module.exports = merge(
         ]
     }),
     loaders.loadTypeScript(),
+    loaders.loadVueJs(),
     loaders.loadJS(),
     loaders.loadCss(),
     loaders.loadScss(),

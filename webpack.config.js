@@ -8,7 +8,7 @@ try {
     configLocal = require('./webpack.config.local');
     console.info('Using local configuration.');
 } catch (exception) {
-    console.info('Using global configuration only. For local configuration create gulp.config.local.js from gulp.config.example.js.');
+    console.info('Using global configuration only. For local configuration create webpack.config.local from webpack.config.example.js.');
 }
 
 const config = merge({
