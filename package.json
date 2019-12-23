@@ -55,6 +55,7 @@
     "typescript": "^3.6.4",
     "typescript-eslint-parser": "^22.0.0",
     "url-loader": "^2.0.1",
+    "vue-eslint-parser": "^7.0.0",
     "vue-loader": "^15.8.3",
     "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.6.11",

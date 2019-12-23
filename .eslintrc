@@ -6,11 +6,18 @@
   "plugins": [
     "vue"
   ],
+  "parser": "vue-eslint-parser",
   "parserOptions": {
     "parser": "babel-eslint",
     "sourceType": "module"
   },
   "rules": {
-    "vue/html-indent": ["warn", 4]
+    "indent": ["warn", 4],
+    "vue/script-indent": ["warn", 4, {
+      "baseIndent": 0
+    }],
+    "vue/html-indent": ["warn", 4, {
+      "attribute": 2
+    }]
   }
 }

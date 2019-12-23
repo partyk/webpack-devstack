@@ -1,9 +1,9 @@
 <template>
     <div
-        id="a"
-        class="b"
-        other-attr="{longname: longvalue}"
-        other-attr2="{longname: longvalue}"
+            id="a"
+            class="b"
+            other-attr="{longname: longvalue}"
+            other-attr2="{longname: longvalue}"
     >
         {{ greeting }}
     </div>
