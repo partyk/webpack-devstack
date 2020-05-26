@@ -5,7 +5,6 @@ const path = require('path');
 const modules = require('./../modules/index');
 
 /* plugins */
-// const plugins = require('./../webpack.plugins');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = ({include, exclude} = {}) => ({
@@ -32,11 +31,14 @@ module.exports = ({include, exclude} = {}) => ({
                             importLoaders: 4,
                             sourceMap: config.isDevelop
                         }
-                    }, /*
-                    {
-                        loader: 'resolve-url-loader'
-                    },*/
+                    },
                     modules.loaderPostCSS(),
+                    /* {
+                        loader: 'resolve-url-loader',
+                        options: {
+                            removeCR: true
+                        },
+                    }, */
                     // modules.loaderIconFont(),
                     {
                         loader: 'less-loader',
@@ -51,12 +53,5 @@ module.exports = ({include, exclude} = {}) => ({
                 ]
             }
         ]
-    },
-    plugins: [
-        new MiniCssExtractPlugin({
-            filename: 'css/[name].css',
-            chunkFilename: 'css/chunks/[id].[hash].css',
-            ignoreOrder: false // Enable to remove warnings about conflicting order
-        })
-    ]
+    }
 });

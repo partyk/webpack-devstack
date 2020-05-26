@@ -13,18 +13,6 @@ module.exports = merge(
     {
         mode: 'development',
         // a complete list of "stats" setting is on https://webpack.js.org/configuration/stats/
-        stats: {
-            // copied from `'minimal'`
-            all: false,
-            assets: false,
-            modules: true,
-            maxModules: 0,
-            errors: false, // disabled errors
-            warnings: false, // disabled warnings
-            // our additional options
-            moduleTrace: true,
-            errorDetails: true
-        },
         resolve: {
             extensions: ['.vue', '.css', '.tsx', '.ts', '.js', '.json'],
             modules: [
@@ -36,8 +24,8 @@ module.exports = merge(
         },
         plugins: [
             plugins.clean(),
-            plugins.friendlyErrors(),
             plugins.copy(),
+            plugins.miniCssExtract(),
             plugins.imageMin(),
             plugins.iconFont(),
             plugins.webpackBar(),

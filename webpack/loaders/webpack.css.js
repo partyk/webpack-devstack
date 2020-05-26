@@ -41,12 +41,5 @@ module.exports = ({include, exclude} = {}) => ({
                 ]
             }
         ]
-    },
-    plugins: [
-        new MiniCssExtractPlugin({
-            filename: 'css/[name].css',
-            chunkFilename: '[id].[hash].css',
-            ignoreOrder: false // Enable to remove warnings about conflicting order
-        })
-    ]
+    }
 });

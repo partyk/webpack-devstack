@@ -38,7 +38,10 @@ module.exports = ({include, exclude} = {}) => ({
                         }
                     },
                     {
-                        loader: 'resolve-url-loader'
+                        loader: 'resolve-url-loader',
+                        options: {
+                            removeCR: true
+                        }
                     },
                     modules.loaderPostCSS(),
                     modules.loaderIconFont(),
@@ -51,12 +54,5 @@ module.exports = ({include, exclude} = {}) => ({
                 ]
             }
         ]
-    },
-    plugins: [
-        new MiniCssExtractPlugin({
-            filename: 'css/[name].css',
-            chunkFilename: '[id].[hash].css',
-            ignoreOrder: false // Enable to remove warnings about conflicting order
-        })
-    ]
+    }
 });
