@@ -33,20 +33,22 @@ module.exports = ({include, exclude} = {}) => ({
                         }
                     },
                     modules.loaderPostCSS(),
-                    {
+                    /* s{
                         loader: 'resolve-url-loader',
-                        /* options: {
+                        options: {
                             removeCR: true
-                        }, */
-                    },
+                        },
+                    }, */
                     // modules.loaderIconFont(),
                     {
                         loader: 'less-loader',
                         options: {
-                            paths: [
-                                config.path.node_modules,
-                                config.path.src
-                            ],
+                            lessOptions: {
+                                paths: [
+                                    config.path.node_modules,
+                                    config.path.src
+                                ],
+                            },
                             sourceMap: config.isDevelop
                         }
                     }
