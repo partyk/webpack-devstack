@@ -33,12 +33,12 @@ module.exports = ({include, exclude} = {}) => ({
                         }
                     },
                     modules.loaderPostCSS(),
-                    /* {
+                    {
                         loader: 'resolve-url-loader',
-                        options: {
+                        /* options: {
                             removeCR: true
-                        },
-                    }, */
+                        }, */
+                    },
                     // modules.loaderIconFont(),
                     {
                         loader: 'less-loader',
