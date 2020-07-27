@@ -8,7 +8,7 @@ const loaders = require('./webpack/loaders/index');
 
 /* plugins */
 const plugins = require('./webpack/plugins/index');
-Y
+
 module.exports = merge(
     {
         mode: 'development',
