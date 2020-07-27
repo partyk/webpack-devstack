@@ -1,6 +1,6 @@
 const isProduction = require('./webpack/libs/isProduction');
 const pkg = require('./package.json');
-const merge = require('webpack-merge');
+const {merge} = require('webpack-merge');
 const configProd = require('./webpack.config.prod');
 let configLocal = {};
 

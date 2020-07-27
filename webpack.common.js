@@ -1,14 +1,14 @@
 /* config for all */
 const config = require('./webpack.config');
 const path = require('path');
-const merge = require('webpack-merge');
+const {merge} = require('webpack-merge');
 
 /* loaders */
 const loaders = require('./webpack/loaders/index');
 
 /* plugins */
 const plugins = require('./webpack/plugins/index');
-
+Y
 module.exports = merge(
     {
         mode: 'development',
