@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="true" type="js.build_tools.npm">
+    <package-json value="$PROJECT_DIR$/package.json" />
+    <command value="install" />
+    <node-interpreter value="$PROJECT_DIR$/../../libs_php_storm/node/node-v12.19.0-win-x64/node-v12.19.0-win-x64/node" />
+    <envs />
+    <method v="2" />
+  </configuration>
+</component>

@@ -1,5 +1,4 @@
 const config = require('../../webpack.config');
-const path = require('path');
 
 /* modules */
 const modules = require('./../modules/index');
@@ -9,9 +8,6 @@ const modules = require('./../modules/index');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = ({include, exclude} = {}) => ({
-    entry: {
-        'style-scss': path.resolve(config.path.src, 'scss/src/style.scss')
-    },
     module: {
         rules: [
             {
@@ -26,33 +22,33 @@ module.exports = ({include, exclude} = {}) => ({
                             // only enable hot in development
                             hmr: config.isDevelop,
                             // if hmr does not work, this is a forceful method.
-                            reloadAll: config.isProduction
-                        }
+                            reloadAll: config.isProduction,
+                        },
                     },
                     // 'style-loader',
                     {
                         loader: 'css-loader',
                         options: {
                             importLoaders: 4,
-                            sourceMap: config.isDevelop
-                        }
+                            sourceMap: config.isDevelop,
+                        },
                     },
                     {
                         loader: 'resolve-url-loader',
                         options: {
-                            removeCR: true
-                        }
+                            removeCR: true,
+                        },
                     },
                     modules.loaderPostCSS(),
                     modules.loaderIconFont(),
                     {
                         loader: 'sass-loader',
                         options: {
-                            sourceMap: config.isDevelop
-                        }
-                    }
-                ]
-            }
-        ]
-    }
+                            sourceMap: config.isDevelop,
+                        },
+                    },
+                ],
+            },
+        ],
+    },
 });

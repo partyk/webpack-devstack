@@ -12,7 +12,41 @@
     "sourceType": "module"
   },
   "rules": {
-    "indent": ["warn", 4],
+    "comma-dangle": [
+      "warn",
+      {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "always-multiline"
+      }
+    ],
+    "indent": ["warn", 4, {"SwitchCase": 1}],
+    "semi": ["error", "always", {"omitLastInOneLineBlock": true}],
+    "quotes": ["warn", "single", {"allowTemplateLiterals": true}],
+    "object-curly-spacing": ["warn", "never"],
+    "operator-linebreak": ["warn", "before"],
+    "eol-last": "warn",
+    "spaced-comment": "warn",
+    "no-new": "warn",
+    "no-multiple-empty-lines": [
+      "warn",
+      {
+        "max": 2,
+        "maxEOF": 0,
+        "maxBOF": 0
+      }
+    ],
+    "space-before-function-paren": [
+      "warn",
+      {
+        "anonymous": "always",
+        "named": "never",
+        "asyncArrow": "always"
+      }
+    ],
+    "no-unneeded-ternary": 2,
     "vue/script-indent": ["warn", 4, {
       "baseIndent": 0
     }],
