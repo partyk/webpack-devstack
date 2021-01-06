@@ -2,8 +2,4 @@
 import 'core-js/modules/es.promise';
 import 'core-js/modules/es.array.iterator';
 
-Promise.all([
-    import(/* webpackChunkName: "coreJs" */ 'regenerator-runtime/runtime'),
-    import(/* webpackChunkName: "runtime" */ 'regenerator-runtime/runtime'),
-    import(/* webpackChunkName: "mainIndex" */ '../main/index'),
-]).then();
+import(/* webpackChunkName: "main-index" */ '../main/index').then();

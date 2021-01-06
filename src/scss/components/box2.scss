@@ -1,0 +1,22 @@
+.box2 {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    color: #FFF;
+    background: aqua;
+    justify-content: center;
+    align-items: center;
+    background: no-repeat url('./../../images/rose-blue-flower-rose-blooms-67636.jpeg') center;
+    background-size: auto;
+    &--png {
+        background-image: url('./../../images/img2.png');
+    }
+
+    &--svg {
+        background-image: url('./../../images/test.svg');
+    }
+
+    &--url {
+        background-image: url('https://1gr.cz/fotky/idnes/19/071/r6/ZEL7c8e76_AI_TENNIS_WIMBLEDON_0709_1N_9.JPG')
+    }
+}

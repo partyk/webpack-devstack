@@ -16,21 +16,12 @@ module.exports = merge(
         resolve: {
             extensions: ['.vue', '.css', '.tsx', '.ts', '.js', '.json'],
             modules: [
-                path.resolve(__dirname, 'node_modules'),
-            ],
-        },
-        entry: {
-            'main': path.resolve(config.path.src, 'js/src/index.js'),
-            'style-scss': path.resolve(config.path.src, 'scss/src/style.scss'),
+                path.resolve(__dirname, 'node_modules')
+            ]
         },
         output: {
-            path: path.resolve(config.path.assets),
+            path: path.resolve(config.path.assets)
         },
-        /* alias: {
-            '@images': path.resolve(__dirname, 'src/images'),
-            '@ui': path.resolve(__dirname, 'src'),
-            '@node_modules': path.resolve(__dirname, config.dir.node_modules),
-        }, */
         plugins: [
             plugins.clean(),
             plugins.copy(),
@@ -39,23 +30,25 @@ module.exports = merge(
             plugins.iconFont(),
             plugins.webpackBar(),
             plugins.duplicatePackageChecker(),
-        ],
+            plugins.vueLoader()
+        ]
     },
     loaders.loadESLint({
         exclude: [
-            path.resolve(__dirname, 'node_modules'),
-        ],
+            path.resolve(__dirname, 'node_modules')
+        ]
     }),
     loaders.loadTypeScript(),
+    loaders.loadVueJs(),
     loaders.loadJS(),
     loaders.loadCss(),
     loaders.loadScss(),
-    // loaders.loadLess(),
+    loaders.loadLess(),
     loaders.loadImage(),
     loaders.loadFonts({
         include: [
             path.resolve(__dirname, 'src/icons'),
-            path.resolve(__dirname, 'src/fonts'),
-        ],
-    }),
+            path.resolve(__dirname, 'src/fonts')
+        ]
+    })
 );
